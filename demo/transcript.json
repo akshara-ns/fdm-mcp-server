@@ -1,0 +1,563 @@
+{
+  "run_at": "2026-11-08T18:47:43",
+  "transport": "stdio",
+  "calls": [
+    {
+      "title": "Original HW4 tool: the 14-hour overnight print from interview P3",
+      "tool": "compare_failure_costs",
+      "arguments": {
+        "print_time_h": 14,
+        "filament_g": 300,
+        "failure_probability": 0.15
+      },
+      "is_error": false,
+      "text": "{\n  \"tool\": \"compare_failure_costs\",\n  \"verdict\": \"OK\",\n  \"decision\": null,\n  \"summary\": \"With p = 0.15 per attempt, each good part wastes on average 52.9 g and 2.47 h unmonitored, 16.5 g and 0.77 h with detect-and-stop, and 9.3 g and 0.43 h with detect-and-adapt.\",\n  \"results\": {\n    \"A_unmonitored_failed_attempts_per_good_part\": {\n      \"label\": \"A_unmonitored: failed attempts per good part\",\n      \"value\": 0.176,\n      \"unit\": \"-\"\n    },\n    \"A_unmonitored_wasted_hours_per_good_part\": {\n      \"label\": \"A_unmonitored: wasted printer hours per good part\",\n      \"value\": 2.471,\n      \"unit\": \"h\"\n    },\n    \"A_unmonitored_wasted_filament_g_per_good_part\": {\n      \"label\": \"A_unmonitored: wasted filament per good part\",\n      \"value\": 52.9,\n      \"unit\": \"g\"\n    },\n    \"A_unmonitored_waste_cost_per_good_part_usd\": {\n      \"label\": \"A_unmonitored: waste cost per good part\",\n      \"value\": 2.453,\n      \"unit\": \"$\"\n    },\n    \"B_detect_and_stop_failed_attempts_per_good_part\": {\n      \"label\": \"B_detect_and_stop: failed attempts per good part\",\n      \"value\": 0.176,\n      \"unit\": \"-\"\n    },\n    \"B_detect_and_stop_wasted_hours_per_good_part\": {\n      \"label\": \"B_detect_and_stop: wasted printer hours per good part\",\n      \"value\": 0.771,\n      \"unit\": \"h\"\n    },\n    \"B_detect_and_stop_wasted_filament_g_per_good_part\": {\n      \"label\": \"B_detect_and_stop: wasted filament per good part\",\n      \"value\": 16.5,\n      \"unit\": \"g\"\n    },\n    \"B_detect_and_stop_waste_cost_per_good_part_usd\": {\n      \"label\": \"B_detect_and_stop: waste cost per good part\",\n      \"value\": 0.765,\n      \"unit\": \"$\"\n    },\n    \"C_detect_and_adapt_failed_attempts_per_good_part\": {\n      \"label\": \"C_detect_and_adapt: failed attempts per good part\",\n      \"value\": 0.099,\n      \"unit\": \"-\"\n    },\n    \"C_detect_and_adapt_wasted_hours_per_good_part\": {\n      \"label\": \"C_detect_and_adapt: wasted printer hours per good part\",\n      \"value\": 0.432,\n      \"unit\": \"h\"\n    },\n    \"C_detect_and_adapt_wasted_filament_g_per_good_part\": {\n      \"label\": \"C_detect_and_adapt: wasted filament per good part\",\n      \"value\": 9.3,\n      \"unit\": \"g\"\n    },\n    \"C_detect_and_adapt_waste_cost_per_good_part_usd\": {\n      \"label\": \"C_detect_and_adapt: waste cost per good part\",\n      \"value\": 0.429,\n      \"unit\": \"$\"\n    },\n    \"saved_B_vs_A_filament_g_per_good_part\": {\n      \"label\": \"Filament saved per good part, B vs A\",\n      \"value\": 36.4,\n      \"unit\": \"g\"\n    },\n    \"saved_B_vs_A_hours_per_good_part\": {\n      \"label\": \"Printer hours saved per good part, B vs A\",\n      \"value\": 1.7,\n      \"unit\": \"h\"\n    },\n    \"saved_B_vs_A_cost_per_good_part_usd\": {\n      \"label\": \"Waste cost saved per good part, B vs A\",\n      \"value\": 1.69,\n      \"unit\": \"$\"\n    },\n    \"saved_C_vs_A_filament_g_per_good_part\": {\n      \"label\": \"Filament saved per good part, C vs A\",\n      \"value\": 43.7,\n      \"unit\": \"g\"\n    },\n    \"saved_C_vs_A_hours_per_good_part\": {\n      \"label\": \"Printer hours saved per good part, C vs A\",\n      \"value\": 2.039,\n      \"unit\": \"h\"\n    },\n    \"saved_C_vs_A_cost_per_good_part_usd\": {\n      \"label\": \"Waste cost saved per good part, C vs A\",\n      \"value\": 2.02,\n      \"unit\": \"$\"\n    },\n    \"hours_saved_B_vs_A_per_jobs_h\": {\n      \"label\": \"Printer hours saved by B vs A over 100 good parts\",\n      \"value\": 170.0,\n      \"unit\": \"h\"\n    },\n    \"filament_saved_B_vs_A_per_jobs_g\": {\n      \"label\": \"Filament saved by B vs A over 100 good parts\",\n      \"value\": 3643.0,\n      \"unit\": \"g\"\n    },\n    \"filament_saved_C_vs_A_per_jobs_g\": {\n      \"label\": \"Filament saved by C vs A over 100 good parts\",\n      \"value\": 4369.0,\n      \"unit\": \"g\"\n    },\n    \"hours_saved_C_vs_A_per_jobs_h\": {\n      \"label\": \"Printer hours saved by C vs A over 100 good parts\",\n      \"value\": 203.9,\n      \"unit\": \"h\"\n    }\n  },\n  \"checks\": [],\n  \"features\": null,\n  \"inputs\": {\n    \"print_time_h\": 14.0,\n    \"filament_g\": 300.0,\n    \"failure_probability\": 0.15,\n    \"mean_failure_point\": 0.3,\n    \"detection_delay_min\": 10.0,\n    \"recoverable_share\": 0.4,\n    \"filament_price_per_kg\": 23.0,\n    \"machine_cost_per_h\": 0.5,\n    \"jobs\": 100\n  },\n  \"defaults_used\": [\n    \"mean_failure_point = 0.3\",\n    \"detection_delay_min = 10\",\n    \"recoverable_share = 0.4\",\n    \"filament_price_per_kg = 23\",\n    \"machine_cost_per_h = 0.5\",\n    \"jobs = 100\"\n  ],\n  \"assumptions\": [\n    \"Attempts are independent with the same failure probability; repeat until one succeeds (geometric).\",\n    \"Unmonitored failures are found at the end of the job and waste its full time and filament.\",\n    \"A detected failure stops the printer delay minutes after it happens at mean_failure_point of the job.\",\n    \"Detect-and-adapt: recoverable_share of failures finish as a usable part with no extra waste. This share is the project's hypothesis, not a measured value.\",\n    \"Waste cost = filament + machine time; staff time is not counted.\"\n  ],\n  \"warnings\": [],\n  \"human_checks\": [\n    \"Replace the default failure probability with your printer's own record.\",\n    \"recoverable_share is the project's hypothesis, not a measured value.\"\n  ]\n}",
+      "structured": {
+        "tool": "compare_failure_costs",
+        "verdict": "OK",
+        "decision": null,
+        "summary": "With p = 0.15 per attempt, each good part wastes on average 52.9 g and 2.47 h unmonitored, 16.5 g and 0.77 h with detect-and-stop, and 9.3 g and 0.43 h with detect-and-adapt.",
+        "results": {
+          "A_unmonitored_failed_attempts_per_good_part": {
+            "label": "A_unmonitored: failed attempts per good part",
+            "value": 0.176,
+            "unit": "-"
+          },
+          "A_unmonitored_wasted_hours_per_good_part": {
+            "label": "A_unmonitored: wasted printer hours per good part",
+            "value": 2.471,
+            "unit": "h"
+          },
+          "A_unmonitored_wasted_filament_g_per_good_part": {
+            "label": "A_unmonitored: wasted filament per good part",
+            "value": 52.9,
+            "unit": "g"
+          },
+          "A_unmonitored_waste_cost_per_good_part_usd": {
+            "label": "A_unmonitored: waste cost per good part",
+            "value": 2.453,
+            "unit": "$"
+          },
+          "B_detect_and_stop_failed_attempts_per_good_part": {
+            "label": "B_detect_and_stop: failed attempts per good part",
+            "value": 0.176,
+            "unit": "-"
+          },
+          "B_detect_and_stop_wasted_hours_per_good_part": {
+            "label": "B_detect_and_stop: wasted printer hours per good part",
+            "value": 0.771,
+            "unit": "h"
+          },
+          "B_detect_and_stop_wasted_filament_g_per_good_part": {
+            "label": "B_detect_and_stop: wasted filament per good part",
+            "value": 16.5,
+            "unit": "g"
+          },
+          "B_detect_and_stop_waste_cost_per_good_part_usd": {
+            "label": "B_detect_and_stop: waste cost per good part",
+            "value": 0.765,
+            "unit": "$"
+          },
+          "C_detect_and_adapt_failed_attempts_per_good_part": {
+            "label": "C_detect_and_adapt: failed attempts per good part",
+            "value": 0.099,
+            "unit": "-"
+          },
+          "C_detect_and_adapt_wasted_hours_per_good_part": {
+            "label": "C_detect_and_adapt: wasted printer hours per good part",
+            "value": 0.432,
+            "unit": "h"
+          },
+          "C_detect_and_adapt_wasted_filament_g_per_good_part": {
+            "label": "C_detect_and_adapt: wasted filament per good part",
+            "value": 9.3,
+            "unit": "g"
+          },
+          "C_detect_and_adapt_waste_cost_per_good_part_usd": {
+            "label": "C_detect_and_adapt: waste cost per good part",
+            "value": 0.429,
+            "unit": "$"
+          },
+          "saved_B_vs_A_filament_g_per_good_part": {
+            "label": "Filament saved per good part, B vs A",
+            "value": 36.4,
+            "unit": "g"
+          },
+          "saved_B_vs_A_hours_per_good_part": {
+            "label": "Printer hours saved per good part, B vs A",
+            "value": 1.7,
+            "unit": "h"
+          },
+          "saved_B_vs_A_cost_per_good_part_usd": {
+            "label": "Waste cost saved per good part, B vs A",
+            "value": 1.69,
+            "unit": "$"
+          },
+          "saved_C_vs_A_filament_g_per_good_part": {
+            "label": "Filament saved per good part, C vs A",
+            "value": 43.7,
+            "unit": "g"
+          },
+          "saved_C_vs_A_hours_per_good_part": {
+            "label": "Printer hours saved per good part, C vs A",
+            "value": 2.039,
+            "unit": "h"
+          },
+          "saved_C_vs_A_cost_per_good_part_usd": {
+            "label": "Waste cost saved per good part, C vs A",
+            "value": 2.02,
+            "unit": "$"
+          },
+          "hours_saved_B_vs_A_per_jobs_h": {
+            "label": "Printer hours saved by B vs A over 100 good parts",
+            "value": 170.0,
+            "unit": "h"
+          },
+          "filament_saved_B_vs_A_per_jobs_g": {
+            "label": "Filament saved by B vs A over 100 good parts",
+            "value": 3643.0,
+            "unit": "g"
+          },
+          "filament_saved_C_vs_A_per_jobs_g": {
+            "label": "Filament saved by C vs A over 100 good parts",
+            "value": 4369.0,
+            "unit": "g"
+          },
+          "hours_saved_C_vs_A_per_jobs_h": {
+            "label": "Printer hours saved by C vs A over 100 good parts",
+            "value": 203.9,
+            "unit": "h"
+          }
+        },
+        "checks": [],
+        "features": null,
+        "inputs": {
+          "print_time_h": 14.0,
+          "filament_g": 300.0,
+          "failure_probability": 0.15,
+          "mean_failure_point": 0.3,
+          "detection_delay_min": 10.0,
+          "recoverable_share": 0.4,
+          "filament_price_per_kg": 23.0,
+          "machine_cost_per_h": 0.5,
+          "jobs": 100
+        },
+        "defaults_used": [
+          "mean_failure_point = 0.3",
+          "detection_delay_min = 10",
+          "recoverable_share = 0.4",
+          "filament_price_per_kg = 23",
+          "machine_cost_per_h = 0.5",
+          "jobs = 100"
+        ],
+        "assumptions": [
+          "Attempts are independent with the same failure probability; repeat until one succeeds (geometric).",
+          "Unmonitored failures are found at the end of the job and waste its full time and filament.",
+          "A detected failure stops the printer delay minutes after it happens at mean_failure_point of the job.",
+          "Detect-and-adapt: recoverable_share of failures finish as a usable part with no extra waste. This share is the project's hypothesis, not a measured value.",
+          "Waste cost = filament + machine time; staff time is not counted."
+        ],
+        "warnings": [],
+        "human_checks": [
+          "Replace the default failure probability with your printer's own record.",
+          "recoverable_share is the project's hypothesis, not a measured value."
+        ]
+      }
+    },
+    {
+      "title": "New tool 1: same job started at bedtime, then search for a better start time",
+      "tool": "plan_unattended_print",
+      "arguments": {
+        "print_time_h": 14,
+        "filament_g": 300,
+        "start_time": "22:30",
+        "away_from": "23:30",
+        "back_at": "08:00",
+        "earliest_start": "08:00",
+        "latest_start": "23:00"
+      },
+      "is_error": false,
+      "text": "{\n  \"tool\": \"plan_unattended_print\",\n  \"verdict\": \"CAUTION\",\n  \"decision\": \"start at 08:00\",\n  \"summary\": \"A 14 h job started at 22:30 finishes at 12:30 (+1 d); 61% of it runs unattended. If it fails (15% chance), on average 1.6 h pass before anyone knows; expected waste for this attempt is 16.9 g and 0.79 printer-hours ($0.78). Best start in your window: 08:00 (expected waste $0.61).\",\n  \"results\": {\n    \"finish_time\": {\n      \"label\": \"Finish time (clock)\",\n      \"value\": \"12:30 (+1 d)\",\n      \"unit\": \"HH:MM\"\n    },\n    \"unattended_share_pct\": {\n      \"label\": \"Share of the print that runs unattended\",\n      \"value\": 61.0,\n      \"unit\": \"%\"\n    },\n    \"unattended_hours\": {\n      \"label\": \"Unattended printing hours\",\n      \"value\": 8.51,\n      \"unit\": \"h\"\n    },\n    \"p_failure_while_unattended_pct\": {\n      \"label\": \"If it fails: chance the failure happens while nobody is there\",\n      \"value\": 30.0,\n      \"unit\": \"%\"\n    },\n    \"mean_hours_until_known\": {\n      \"label\": \"If it fails: mean time until someone knows\",\n      \"value\": 1.64,\n      \"unit\": \"h\"\n    },\n    \"mean_idle_hours_after_stop\": {\n      \"label\": \"If it fails: mean idle printer time before it can be restarted\",\n      \"value\": 0.0,\n      \"unit\": \"h\"\n    },\n    \"worst_case_hours_unseen\": {\n      \"label\": \"Worst case: longest a failure can go unnoticed\",\n      \"value\": 8.5,\n      \"unit\": \"h\"\n    },\n    \"expected_wasted_filament_g\": {\n      \"label\": \"Expected wasted filament for this attempt\",\n      \"value\": 16.9,\n      \"unit\": \"g\"\n    },\n    \"expected_wasted_hours\": {\n      \"label\": \"Expected wasted printer hours for this attempt\",\n      \"value\": 0.79,\n      \"unit\": \"h\"\n    },\n    \"expected_waste_cost_usd\": {\n      \"label\": \"Expected waste cost for this attempt\",\n      \"value\": 0.78,\n      \"unit\": \"$\"\n    },\n    \"recommended_start\": {\n      \"label\": \"Recommended start time in your window\",\n      \"value\": \"08:00\",\n      \"unit\": \"HH:MM\"\n    },\n    \"recommended_finish\": {\n      \"label\": \"Finish time with the recommended start\",\n      \"value\": \"22:00\",\n      \"unit\": \"HH:MM\"\n    },\n    \"recommended_expected_waste_cost_usd\": {\n      \"label\": \"Expected waste cost with the recommended start\",\n      \"value\": 0.61,\n      \"unit\": \"$\"\n    },\n    \"recommended_mean_hours_until_known\": {\n      \"label\": \"Mean time until a failure is known, recommended start\",\n      \"value\": 0.5,\n      \"unit\": \"h\"\n    }\n  },\n  \"checks\": [\n    {\n      \"name\": \"First layers watched\",\n      \"status\": \"OK\",\n      \"detail\": \"The first 0.5 h (where 50% of failures are assumed to happen) runs while you are present.\"\n    },\n    {\n      \"name\": \"Unseen failure time\",\n      \"status\": \"OK\",\n      \"detail\": \"If it fails, on average 1.6 h pass before anyone knows (CAUTION above 2 h).\"\n    },\n    {\n      \"name\": \"No automatic stop\",\n      \"status\": \"CAUTION\",\n      \"detail\": \"61% of the print runs unattended with nothing that can stop a failure.\"\n    }\n  ],\n  \"features\": null,\n  \"inputs\": {\n    \"print_time_h\": 14.0,\n    \"filament_g\": 300.0,\n    \"start_time\": \"22:30\",\n    \"away_from\": \"23:30\",\n    \"back_at\": \"08:00\",\n    \"detection\": \"none\",\n    \"failure_probability\": 0.15,\n    \"early_failure_share\": 0.5,\n    \"early_window_h\": 0.5,\n    \"detection_coverage\": null,\n    \"detection_delay_min\": null,\n    \"check_interval_min\": 60.0,\n    \"filament_price_per_kg\": 23.0,\n    \"machine_cost_per_h\": 0.5,\n    \"earliest_start\": \"08:00\",\n    \"latest_start\": \"23:00\"\n  },\n  \"defaults_used\": [\n    \"failure_probability = 0.15\",\n    \"early_failure_share = 0.5\",\n    \"early_window_h = 0.5\",\n    \"check_interval_min = 60\",\n    \"filament_price_per_kg = 23\",\n    \"machine_cost_per_h = 0.5\"\n  ],\n  \"assumptions\": [\n    \"One attempt fails with probability failure_probability; early_failure_share of failures happen in the first early_window_h (bed adhesion), the rest uniformly over the job. Both are assumptions, not data.\",\n    \"While present you notice a failure at your next look (half of check_interval_min on average); while away, when you come back. The same away window repeats every day.\",\n    \"A failed job keeps extruding (spaghetti) until it is stopped or the G-code ends; the whole attempt is restarted, never resumed.\",\n    \"Auto-stop catches detection_coverage of failures detection_delay_min after they start; the rest behave as with no detection.\",\n    \"Waste cost = filament + machine time; staff time, energy for re-heating and hardware damage are not counted.\"\n  ],\n  \"warnings\": [\n    \"Hardware damage (a jammed or cracked nozzle) and fire risk are not modelled; follow your space's rules on unattended printing.\"\n  ],\n  \"human_checks\": [\n    \"Watch the first layer yourself (or check the camera) before leaving, whatever the tool says.\",\n    \"Check that unattended printing is allowed in your space and that the printer has thermal-runaway protection.\",\n    \"Replace the default failure_probability with your own printer's record if you have one.\"\n  ]\n}",
+      "structured": {
+        "tool": "plan_unattended_print",
+        "verdict": "CAUTION",
+        "decision": "start at 08:00",
+        "summary": "A 14 h job started at 22:30 finishes at 12:30 (+1 d); 61% of it runs unattended. If it fails (15% chance), on average 1.6 h pass before anyone knows; expected waste for this attempt is 16.9 g and 0.79 printer-hours ($0.78). Best start in your window: 08:00 (expected waste $0.61).",
+        "results": {
+          "finish_time": {
+            "label": "Finish time (clock)",
+            "value": "12:30 (+1 d)",
+            "unit": "HH:MM"
+          },
+          "unattended_share_pct": {
+            "label": "Share of the print that runs unattended",
+            "value": 61.0,
+            "unit": "%"
+          },
+          "unattended_hours": {
+            "label": "Unattended printing hours",
+            "value": 8.51,
+            "unit": "h"
+          },
+          "p_failure_while_unattended_pct": {
+            "label": "If it fails: chance the failure happens while nobody is there",
+            "value": 30.0,
+            "unit": "%"
+          },
+          "mean_hours_until_known": {
+            "label": "If it fails: mean time until someone knows",
+            "value": 1.64,
+            "unit": "h"
+          },
+          "mean_idle_hours_after_stop": {
+            "label": "If it fails: mean idle printer time before it can be restarted",
+            "value": 0.0,
+            "unit": "h"
+          },
+          "worst_case_hours_unseen": {
+            "label": "Worst case: longest a failure can go unnoticed",
+            "value": 8.5,
+            "unit": "h"
+          },
+          "expected_wasted_filament_g": {
+            "label": "Expected wasted filament for this attempt",
+            "value": 16.9,
+            "unit": "g"
+          },
+          "expected_wasted_hours": {
+            "label": "Expected wasted printer hours for this attempt",
+            "value": 0.79,
+            "unit": "h"
+          },
+          "expected_waste_cost_usd": {
+            "label": "Expected waste cost for this attempt",
+            "value": 0.78,
+            "unit": "$"
+          },
+          "recommended_start": {
+            "label": "Recommended start time in your window",
+            "value": "08:00",
+            "unit": "HH:MM"
+          },
+          "recommended_finish": {
+            "label": "Finish time with the recommended start",
+            "value": "22:00",
+            "unit": "HH:MM"
+          },
+          "recommended_expected_waste_cost_usd": {
+            "label": "Expected waste cost with the recommended start",
+            "value": 0.61,
+            "unit": "$"
+          },
+          "recommended_mean_hours_until_known": {
+            "label": "Mean time until a failure is known, recommended start",
+            "value": 0.5,
+            "unit": "h"
+          }
+        },
+        "checks": [
+          {
+            "name": "First layers watched",
+            "status": "OK",
+            "detail": "The first 0.5 h (where 50% of failures are assumed to happen) runs while you are present."
+          },
+          {
+            "name": "Unseen failure time",
+            "status": "OK",
+            "detail": "If it fails, on average 1.6 h pass before anyone knows (CAUTION above 2 h)."
+          },
+          {
+            "name": "No automatic stop",
+            "status": "CAUTION",
+            "detail": "61% of the print runs unattended with nothing that can stop a failure."
+          }
+        ],
+        "features": null,
+        "inputs": {
+          "print_time_h": 14.0,
+          "filament_g": 300.0,
+          "start_time": "22:30",
+          "away_from": "23:30",
+          "back_at": "08:00",
+          "detection": "none",
+          "failure_probability": 0.15,
+          "early_failure_share": 0.5,
+          "early_window_h": 0.5,
+          "detection_coverage": null,
+          "detection_delay_min": null,
+          "check_interval_min": 60.0,
+          "filament_price_per_kg": 23.0,
+          "machine_cost_per_h": 0.5,
+          "earliest_start": "08:00",
+          "latest_start": "23:00"
+        },
+        "defaults_used": [
+          "failure_probability = 0.15",
+          "early_failure_share = 0.5",
+          "early_window_h = 0.5",
+          "check_interval_min = 60",
+          "filament_price_per_kg = 23",
+          "machine_cost_per_h = 0.5"
+        ],
+        "assumptions": [
+          "One attempt fails with probability failure_probability; early_failure_share of failures happen in the first early_window_h (bed adhesion), the rest uniformly over the job. Both are assumptions, not data.",
+          "While present you notice a failure at your next look (half of check_interval_min on average); while away, when you come back. The same away window repeats every day.",
+          "A failed job keeps extruding (spaghetti) until it is stopped or the G-code ends; the whole attempt is restarted, never resumed.",
+          "Auto-stop catches detection_coverage of failures detection_delay_min after they start; the rest behave as with no detection.",
+          "Waste cost = filament + machine time; staff time, energy for re-heating and hardware damage are not counted."
+        ],
+        "warnings": [
+          "Hardware damage (a jammed or cracked nozzle) and fire risk are not modelled; follow your space's rules on unattended printing."
+        ],
+        "human_checks": [
+          "Watch the first layer yourself (or check the camera) before leaving, whatever the tool says.",
+          "Check that unattended printing is allowed in your space and that the printer has thermal-runaway protection.",
+          "Replace the default failure_probability with your own printer's record if you have one."
+        ]
+      }
+    },
+    {
+      "title": "New tool 2: a bracket whose arm was thinned by an in-print repair",
+      "tool": "check_deviated_part",
+      "arguments": {
+        "features": [
+          {
+            "name": "outer shell",
+            "role": "cosmetic",
+            "nominal_mm": 40.0,
+            "measured_mm": 40.6
+          },
+          {
+            "name": "M5 mounting hole",
+            "role": "fit",
+            "nominal_mm": 5.3,
+            "measured_mm": 5.22,
+            "tolerance_mm": 0.15
+          },
+          {
+            "name": "arm thickness",
+            "role": "load_bearing",
+            "nominal_mm": 5.0,
+            "measured_mm": 4.5,
+            "tolerance_mm": 0.6
+          }
+        ],
+        "beam": {
+          "material": "PLA",
+          "length_mm": 40,
+          "width_mm": 20,
+          "nominal_thickness_mm": 5.0,
+          "measured_thickness_mm": 4.5,
+          "load_kg": 2
+        },
+        "repaired_in_load_path": true,
+        "reprint_time_h": 2.5,
+        "reprint_filament_g": 38
+      },
+      "is_error": false,
+      "text": "{\n  \"tool\": \"check_deviated_part\",\n  \"verdict\": \"CAUTION\",\n  \"decision\": \"TEST_BEFORE_USE\",\n  \"summary\": \"Decision: TEST_BEFORE_USE, because layers were changed in the load path, so a calculation alone cannot vouch for its strength. 3 feature(s) checked, 0 functional feature(s) out of tolerance; arm safety factor 3.35 as printed.\",\n  \"results\": {\n    \"beam_safety_factor_design\": {\n      \"label\": \"Arm safety factor, design thickness\",\n      \"value\": 4.14,\n      \"unit\": \"-\"\n    },\n    \"beam_safety_factor_as_printed\": {\n      \"label\": \"Arm safety factor, as-printed thickness\",\n      \"value\": 3.35,\n      \"unit\": \"-\"\n    },\n    \"beam_strength_retained_pct\": {\n      \"label\": \"Bending strength retained (∝ thickness²)\",\n      \"value\": 81.0,\n      \"unit\": \"%\"\n    },\n    \"beam_breaking_load_as_printed_N\": {\n      \"label\": \"Estimated breaking load, as printed\",\n      \"value\": 65.8,\n      \"unit\": \"N\"\n    },\n    \"beam_tip_deflection_as_printed_mm\": {\n      \"label\": \"Tip deflection, as printed\",\n      \"value\": 1.03,\n      \"unit\": \"mm\"\n    },\n    \"reprint_cost_usd\": {\n      \"label\": \"Cost of a reprint (filament + machine time)\",\n      \"value\": 2.12,\n      \"unit\": \"$\"\n    },\n    \"reprint_time_h\": {\n      \"label\": \"Printer time for a reprint\",\n      \"value\": 2.5,\n      \"unit\": \"h\"\n    },\n    \"features_checked\": {\n      \"label\": \"Features checked\",\n      \"value\": 3.0,\n      \"unit\": \"-\"\n    },\n    \"features_out_of_tolerance\": {\n      \"label\": \"Fit/load-bearing features out of tolerance\",\n      \"value\": 0.0,\n      \"unit\": \"-\"\n    },\n    \"worst_functional_tolerance_used_pct\": {\n      \"label\": \"Tolerance used by the tightest functional feature (arm thickness)\",\n      \"value\": 83.0,\n      \"unit\": \"%\"\n    }\n  },\n  \"checks\": [\n    {\n      \"name\": \"Dimensions within designer tolerances\",\n      \"status\": \"OK\",\n      \"detail\": \"all features within tolerance.\"\n    },\n    {\n      \"name\": \"Load-bearing arm, as printed\",\n      \"status\": \"OK\",\n      \"detail\": \"Safety factor 3.35 as printed vs 4.14 as designed (target 2).\"\n    },\n    {\n      \"name\": \"Repair in the load path\",\n      \"status\": \"CAUTION\",\n      \"detail\": \"Layers were changed or re-started where load passes; the bond there is unknown, so the calculated safety factor is not enough on its own.\"\n    }\n  ],\n  \"features\": [\n    {\n      \"name\": \"outer shell\",\n      \"role\": \"cosmetic\",\n      \"nominal_mm\": 40.0,\n      \"measured_mm\": 40.6,\n      \"deviation_mm\": 0.6,\n      \"tolerance_mm\": 1.0,\n      \"tolerance_used_pct\": 60.0,\n      \"status\": \"OK\"\n    },\n    {\n      \"name\": \"M5 mounting hole\",\n      \"role\": \"fit\",\n      \"nominal_mm\": 5.3,\n      \"measured_mm\": 5.22,\n      \"deviation_mm\": -0.08,\n      \"tolerance_mm\": 0.15,\n      \"tolerance_used_pct\": 53.0,\n      \"status\": \"OK\"\n    },\n    {\n      \"name\": \"arm thickness\",\n      \"role\": \"load_bearing\",\n      \"nominal_mm\": 5.0,\n      \"measured_mm\": 4.5,\n      \"deviation_mm\": -0.5,\n      \"tolerance_mm\": 0.6,\n      \"tolerance_used_pct\": 83.0,\n      \"status\": \"OK\"\n    }\n  ],\n  \"inputs\": {\n    \"features\": [\n      {\n        \"name\": \"outer shell\",\n        \"role\": \"cosmetic\",\n        \"nominal_mm\": 40.0,\n        \"measured_mm\": 40.6,\n        \"tolerance_mm\": 1.0\n      },\n      {\n        \"name\": \"M5 mounting hole\",\n        \"role\": \"fit\",\n        \"nominal_mm\": 5.3,\n        \"measured_mm\": 5.22,\n        \"tolerance_mm\": 0.15\n      },\n      {\n        \"name\": \"arm thickness\",\n        \"role\": \"load_bearing\",\n        \"nominal_mm\": 5.0,\n        \"measured_mm\": 4.5,\n        \"tolerance_mm\": 0.6\n      }\n    ],\n    \"beam\": {\n      \"material\": \"PLA\",\n      \"length_mm\": 40.0,\n      \"width_mm\": 20.0,\n      \"nominal_thickness_mm\": 5.0,\n      \"measured_thickness_mm\": 4.5,\n      \"load_kg\": 2.0,\n      \"orientation\": \"flat\"\n    },\n    \"repaired_in_load_path\": true,\n    \"reprint_time_h\": 2.5,\n    \"reprint_filament_g\": 38.0\n  },\n  \"defaults_used\": [\n    \"outer shell: tolerance_mm = 1.0 (cosmetic default)\",\n    \"beam: target_safety_factor = 2.0\",\n    \"beam: interlayer_factor = 0.5\",\n    \"filament_price_per_kg = 23\",\n    \"machine_cost_per_h = 0.5\"\n  ],\n  \"assumptions\": [\n    \"A feature passes when |measured − nominal| ≤ tolerance_mm; tolerances come from the designer.\",\n    \"Cosmetic features (shells, outer walls) default to ±1 mm and can only give a CAUTION.\",\n    \"The arm check reuses check_cantilever with the measured thickness; it assumes a solid section and the same material and layer bonding as the design, which a repaired region may not have.\",\n    \"The tool judges geometry and calculated strength only, not surface finish, porosity or material behaviour.\"\n  ],\n  \"warnings\": [],\n  \"human_checks\": [\n    \"Measure the features yourself (calipers or a test fit); the tool trusts the numbers it is given.\",\n    \"For TEST_BEFORE_USE, proof-load the part to the target load (or a sacrificial copy) before relying on it.\",\n    \"Confirm the tolerances with whoever designed the part.\"\n  ]\n}",
+      "structured": {
+        "tool": "check_deviated_part",
+        "verdict": "CAUTION",
+        "decision": "TEST_BEFORE_USE",
+        "summary": "Decision: TEST_BEFORE_USE, because layers were changed in the load path, so a calculation alone cannot vouch for its strength. 3 feature(s) checked, 0 functional feature(s) out of tolerance; arm safety factor 3.35 as printed.",
+        "results": {
+          "beam_safety_factor_design": {
+            "label": "Arm safety factor, design thickness",
+            "value": 4.14,
+            "unit": "-"
+          },
+          "beam_safety_factor_as_printed": {
+            "label": "Arm safety factor, as-printed thickness",
+            "value": 3.35,
+            "unit": "-"
+          },
+          "beam_strength_retained_pct": {
+            "label": "Bending strength retained (∝ thickness²)",
+            "value": 81.0,
+            "unit": "%"
+          },
+          "beam_breaking_load_as_printed_N": {
+            "label": "Estimated breaking load, as printed",
+            "value": 65.8,
+            "unit": "N"
+          },
+          "beam_tip_deflection_as_printed_mm": {
+            "label": "Tip deflection, as printed",
+            "value": 1.03,
+            "unit": "mm"
+          },
+          "reprint_cost_usd": {
+            "label": "Cost of a reprint (filament + machine time)",
+            "value": 2.12,
+            "unit": "$"
+          },
+          "reprint_time_h": {
+            "label": "Printer time for a reprint",
+            "value": 2.5,
+            "unit": "h"
+          },
+          "features_checked": {
+            "label": "Features checked",
+            "value": 3.0,
+            "unit": "-"
+          },
+          "features_out_of_tolerance": {
+            "label": "Fit/load-bearing features out of tolerance",
+            "value": 0.0,
+            "unit": "-"
+          },
+          "worst_functional_tolerance_used_pct": {
+            "label": "Tolerance used by the tightest functional feature (arm thickness)",
+            "value": 83.0,
+            "unit": "%"
+          }
+        },
+        "checks": [
+          {
+            "name": "Dimensions within designer tolerances",
+            "status": "OK",
+            "detail": "all features within tolerance."
+          },
+          {
+            "name": "Load-bearing arm, as printed",
+            "status": "OK",
+            "detail": "Safety factor 3.35 as printed vs 4.14 as designed (target 2)."
+          },
+          {
+            "name": "Repair in the load path",
+            "status": "CAUTION",
+            "detail": "Layers were changed or re-started where load passes; the bond there is unknown, so the calculated safety factor is not enough on its own."
+          }
+        ],
+        "features": [
+          {
+            "name": "outer shell",
+            "role": "cosmetic",
+            "nominal_mm": 40.0,
+            "measured_mm": 40.6,
+            "deviation_mm": 0.6,
+            "tolerance_mm": 1.0,
+            "tolerance_used_pct": 60.0,
+            "status": "OK"
+          },
+          {
+            "name": "M5 mounting hole",
+            "role": "fit",
+            "nominal_mm": 5.3,
+            "measured_mm": 5.22,
+            "deviation_mm": -0.08,
+            "tolerance_mm": 0.15,
+            "tolerance_used_pct": 53.0,
+            "status": "OK"
+          },
+          {
+            "name": "arm thickness",
+            "role": "load_bearing",
+            "nominal_mm": 5.0,
+            "measured_mm": 4.5,
+            "deviation_mm": -0.5,
+            "tolerance_mm": 0.6,
+            "tolerance_used_pct": 83.0,
+            "status": "OK"
+          }
+        ],
+        "inputs": {
+          "features": [
+            {
+              "name": "outer shell",
+              "role": "cosmetic",
+              "nominal_mm": 40.0,
+              "measured_mm": 40.6,
+              "tolerance_mm": 1.0
+            },
+            {
+              "name": "M5 mounting hole",
+              "role": "fit",
+              "nominal_mm": 5.3,
+              "measured_mm": 5.22,
+              "tolerance_mm": 0.15
+            },
+            {
+              "name": "arm thickness",
+              "role": "load_bearing",
+              "nominal_mm": 5.0,
+              "measured_mm": 4.5,
+              "tolerance_mm": 0.6
+            }
+          ],
+          "beam": {
+            "material": "PLA",
+            "length_mm": 40.0,
+            "width_mm": 20.0,
+            "nominal_thickness_mm": 5.0,
+            "measured_thickness_mm": 4.5,
+            "load_kg": 2.0,
+            "orientation": "flat"
+          },
+          "repaired_in_load_path": true,
+          "reprint_time_h": 2.5,
+          "reprint_filament_g": 38.0
+        },
+        "defaults_used": [
+          "outer shell: tolerance_mm = 1.0 (cosmetic default)",
+          "beam: target_safety_factor = 2.0",
+          "beam: interlayer_factor = 0.5",
+          "filament_price_per_kg = 23",
+          "machine_cost_per_h = 0.5"
+        ],
+        "assumptions": [
+          "A feature passes when |measured − nominal| ≤ tolerance_mm; tolerances come from the designer.",
+          "Cosmetic features (shells, outer walls) default to ±1 mm and can only give a CAUTION.",
+          "The arm check reuses check_cantilever with the measured thickness; it assumes a solid section and the same material and layer bonding as the design, which a repaired region may not have.",
+          "The tool judges geometry and calculated strength only, not surface finish, porosity or material behaviour."
+        ],
+        "warnings": [],
+        "human_checks": [
+          "Measure the features yourself (calipers or a test fit); the tool trusts the numbers it is given.",
+          "For TEST_BEFORE_USE, proof-load the part to the target load (or a sacrificial copy) before relying on it.",
+          "Confirm the tolerances with whoever designed the part."
+        ]
+      }
+    },
+    {
+      "title": "Invalid input (domain rule): a fit feature with no tolerance",
+      "tool": "check_deviated_part",
+      "arguments": {
+        "features": [
+          {
+            "name": "M5 mounting hole",
+            "role": "fit",
+            "nominal_mm": 5.3,
+            "measured_mm": 5.22
+          }
+        ]
+      },
+      "is_error": true,
+      "text": "Error executing tool check_deviated_part: Invalid input: M5 mounting hole: tolerance_mm is required for a fit feature. Only the designer knows how much error it can take; give the allowed deviation in mm.",
+      "structured": null
+    },
+    {
+      "title": "Invalid input (schema): an impossible clock time",
+      "tool": "plan_unattended_print",
+      "arguments": {
+        "print_time_h": 14,
+        "filament_g": 300,
+        "start_time": "25:00",
+        "away_from": "23:30",
+        "back_at": "08:00"
+      },
+      "is_error": true,
+      "text": "Error executing tool plan_unattended_print: 1 validation error for plan_unattended_printArguments\nstart_time\n  String should match pattern '^([01]?\\d|2[0-3]):[0-5]\\d$' [type=string_pattern_mismatch, input_value='25:00', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_pattern_mismatch",
+      "structured": null
+    }
+  ],
+  "tools": [
+    "estimate_print_job",
+    "check_cantilever",
+    "check_container",
+    "compare_failure_costs",
+    "plan_unattended_print",
+    "check_deviated_part"
+  ]
+}
